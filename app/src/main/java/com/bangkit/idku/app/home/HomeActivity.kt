@@ -1,10 +1,10 @@
-package com.bangkit.capstone.idku
+package com.bangkit.idku.app.home
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.bangkit.capstone.idku.databinding.ActivityMainBinding
+import com.bangkit.idku.app.databinding.ActivityMainBinding
 
-class MainActivity : AppCompatActivity() {
+class HomeActivity : AppCompatActivity() {
     private val binding by lazy {
         ActivityMainBinding.inflate(layoutInflater)
     }

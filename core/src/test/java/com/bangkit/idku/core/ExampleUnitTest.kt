@@ -1,4 +1,4 @@
-package com.bangkit.capstone.idku
+package com.bangkit.idku.core
 
 import org.junit.Test
 

@@ -1,2 +1,3 @@
 rootProject.name = "IndonesiaKu"
 include ':app'
+include ':core'
