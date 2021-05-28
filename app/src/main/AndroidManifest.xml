@@ -16,9 +16,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.IndonesiaKu">
         <activity
-            android:name=".login.ui.login.LoginActivity"
-            android:label="@string/title_activity_login" />
-        <activity
             android:name=".home.HomeActivity"
             android:label="@string/title_activity_home">
             <intent-filter>
@@ -26,9 +23,6 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name=".home.MainActivity">
-
         </activity>
     </application>
 
