@@ -1,6 +1,6 @@
 package com.bangkit.idku.app.core.di
 
-import com.bangkit.idku.core.BuildConfig
+import com.bangkit.idku.app.BuildConfig
 import com.bangkit.idku.app.core.data.source.remote.network.IndonesiaKuServices
 import dagger.Module
 import dagger.Provides
@@ -23,12 +23,12 @@ object RemoteModule {
             .build()
 
     @Provides
-    fun ProvideIDkuServices(okHttpClient: OkHttpClient): com.bangkit.idku.app.core.data.source.remote.network.IndonesiaKuServices =
+    fun ProvideIDkuServices(okHttpClient: OkHttpClient): IndonesiaKuServices =
         Retrofit.Builder()
             .baseUrl("")
             .client(okHttpClient)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
-            .create(com.bangkit.idku.app.core.data.source.remote.network.IndonesiaKuServices::class.java)
+            .create(IndonesiaKuServices::class.java)
 
 }

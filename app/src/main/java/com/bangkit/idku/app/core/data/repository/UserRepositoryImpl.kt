@@ -1,11 +1,13 @@
 package com.bangkit.idku.app.core.data.repository
 
-import com.bangkit.idku.core.domain.model.LoggedInUser
-import com.bangkit.idku.core.domain.repository.UserRepository
+import com.bangkit.idku.app.core.domain.model.LoggedInUser
+import com.bangkit.idku.app.core.domain.repository.UserRepository
 import javax.inject.Singleton
 
 @Singleton
-class UserRepositoryImpl : UserRepository {
+class UserRepositoryImpl(
+//    private val firebaseAuth: FirebaseAuth
+) : UserRepository {
     private var user: LoggedInUser? = null
 
     override fun signUp(email: String, name: String, password: String, confirmPassword: String) {
