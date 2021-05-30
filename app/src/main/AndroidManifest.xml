@@ -9,13 +9,14 @@
     <uses-permission android:name="android.permission.CAMERA" />
 
     <application
+        android:name=".IndonesiaKu"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.IndonesiaKu">
-        <activity android:name=".onboarding.TestActivity"></activity>
+        <activity android:name=".onboarding.TestActivity"/>
         <activity
             android:name=".onboarding.ui.OnboardingActivity"
             android:label="@string/title_activity_onboarding">
