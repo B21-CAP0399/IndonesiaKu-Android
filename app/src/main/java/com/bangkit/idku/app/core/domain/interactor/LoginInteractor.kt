@@ -1,11 +1,11 @@
 package com.bangkit.idku.app.core.domain.interactor
 
-import com.bangkit.idku.core.domain.repository.UserRepository
-import com.bangkit.idku.core.domain.usecase.LoginUseCase
+import com.bangkit.idku.app.core.domain.repository.UserRepository
+import com.bangkit.idku.app.core.domain.usecase.LoginUseCase
 
 class LoginInteractor(
     private val userRepository: UserRepository
-): LoginUseCase {
+) : LoginUseCase {
     override fun login(email: String, password: String) =
         userRepository.login(email, password)
 }

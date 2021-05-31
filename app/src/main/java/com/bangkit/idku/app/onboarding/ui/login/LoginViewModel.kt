@@ -1,13 +1,8 @@
 package com.bangkit.idku.app.onboarding.ui.login
 
 import android.util.Patterns
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.bangkit.idku.core.domain.model.LoggedInUser
-import com.bangkit.idku.core.domain.model.LoginResult
-import com.bangkit.idku.core.domain.repository.UserRepository
-import com.bangkit.idku.core.domain.usecase.LoginUseCase
+import com.bangkit.idku.app.core.domain.usecase.LoginUseCase
 
 class LoginViewModel(
     private val loginUseCase: LoginUseCase
