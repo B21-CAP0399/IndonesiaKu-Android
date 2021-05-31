@@ -3,6 +3,7 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-kapt'
     id 'dagger.hilt.android.plugin'
+    id 'com.google.gms.google-services'
 }
 
 android {
@@ -10,7 +11,7 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "com.bangkit.capstone.idku"
+        applicationId "com.bangkit.idku.app"
         minSdkVersion 21
         targetSdkVersion 30
         versionCode 1
@@ -54,7 +55,7 @@ dependencies {
     // ML Kit for Barcode Scanning
     implementation 'com.google.mlkit:barcode-scanning:16.1.1'
 
-    implementation 'com.firebaseui:firebase-ui-auth:6.4.0'
+//    implementation 'com.firebaseui:firebase-ui-auth:6.4.0'
 
 //    implementation('com.journeyapps:zxing-android-embedded:4.2.0') { transitive = false }
     implementation 'com.google.zxing:core:3.3.0'
