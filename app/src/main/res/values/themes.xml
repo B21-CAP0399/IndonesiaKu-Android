@@ -12,10 +12,13 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+        <item name="background">@color/foreground</item>
+        <item name="android:windowBackground">@color/foreground</item>
+
     </style>
 
     <style name="ThemeOverlay.IndonesiaKu.FullscreenContainer" parent="">
-        <item name="fullscreenBackgroundColor">@color/light_blue_600</item>
+        <item name="fullscreenBackgroundColor">#E5E5E5</item>
         <item name="fullscreenTextColor">@color/light_blue_A200</item>
     </style>
 </resources>
