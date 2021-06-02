@@ -16,9 +16,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.IndonesiaKu">
-        <activity android:name=".onboarding.TestActivity"/>
+        <activity android:name=".onboard.TestActivity"/>
         <activity
-            android:name=".onboarding.ui.OnboardingActivity"
+            android:name=".onboard.ui.OnboardActivity"
+            android:theme="@style/Theme.MaterialComponents.NoActionBar"
             android:label="@string/title_activity_onboarding">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
