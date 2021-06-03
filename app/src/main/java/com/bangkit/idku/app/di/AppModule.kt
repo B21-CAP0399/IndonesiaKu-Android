@@ -1,5 +1,23 @@
 package com.bangkit.idku.app.di
 
-abstract class AppModule {
+import com.bangkit.idku.app.core.domain.interactor.LoginInteractor
+import com.bangkit.idku.app.core.domain.interactor.SignUpInteractor
+import com.bangkit.idku.app.core.domain.usecase.LoginUseCase
+import com.bangkit.idku.app.core.domain.usecase.SignUpUseCase
+import dagger.Binds
+import dagger.Module
+import dagger.hilt.InstallIn
+import dagger.hilt.android.components.ViewModelComponent
+import dagger.hilt.android.scopes.ViewModelScoped
 
+@Module
+@InstallIn(ViewModelComponent::class)
+abstract class AppModule {
+    @Binds
+    @ViewModelScoped
+    abstract fun bindsLoginUseCase(loginInteractor: LoginInteractor): LoginUseCase
+
+    @Binds
+    @ViewModelScoped
+    abstract fun bindsSignUpUseCase(signUpInteractor: SignUpInteractor): SignUpUseCase
 }

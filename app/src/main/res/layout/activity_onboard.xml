@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".onboarding.ui.OnboardingActivity">
+    tools:context=".onboard.ui.OnboardActivity">
 
     <fragment
-        android:id="@+id/nav_host_fragment_onboarding"
+        android:id="@+id/nav_host_fragment_onboard"
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
