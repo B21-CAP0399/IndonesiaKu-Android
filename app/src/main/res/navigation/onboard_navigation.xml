@@ -5,26 +5,37 @@
     android:id="@+id/onboarding_navigation"
     app:startDestination="@id/loginFragment">
 
-    <include app:graph="@navigation/mobile_navigation" />
+    <include app:graph="@navigation/main_navigation" />
     <fragment
         android:id="@+id/signUpFragment"
         android:name="com.bangkit.idku.app.onboard.ui.signup.SignUpFragment"
         android:label="fragment_sign_in"
-        tools:layout="@layout/fragment_sign_in" >
+        tools:layout="@layout/fragment_sign_up">
         <action
-            android:id="@+id/action_signUpFragment_to_loginFragment"
-            app:destination="@id/loginFragment" />
+            android:id="@+id/action_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.bangkit.idku.app.onboard.ui.login.LoginFragment"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_login" >
+        tools:layout="@layout/fragment_login">
         <action
-            android:id="@+id/action_loginFragment_to_mobile_navigation"
+            android:id="@+id/action_login"
             app:destination="@id/mobile_navigation" />
         <action
-            android:id="@+id/action_loginFragment_to_signUpFragment"
+            android:id="@+id/action_to_signUpFragment"
             app:destination="@id/signUpFragment" />
+        <argument
+            android:name="signed_up"
+            android:defaultValue="false"
+            app:argType="boolean" />
     </fragment>
 </navigation>
