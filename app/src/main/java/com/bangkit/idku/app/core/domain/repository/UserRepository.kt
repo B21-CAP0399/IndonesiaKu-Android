@@ -1,10 +1,12 @@
 package com.bangkit.idku.app.core.domain.repository
 
-import com.bangkit.idku.app.core.domain.model.LoggedInUser
+import com.google.android.gms.tasks.Task
+import com.google.firebase.auth.AuthResult
+import com.google.firebase.auth.FirebaseUser
 
 interface UserRepository {
-    fun signUp(email: String, name: String, password: String, confirmPassword: String)
-    fun login(email: String, password: String)
-    fun setLoggedInUser(loggedInUser: LoggedInUser)
+    val user: FirebaseUser?
+    fun signUp(email: String, password: String, confirmPassword: String): Task<AuthResult>
+    fun login(email: String, password: String): Task<AuthResult>
     fun logout()
 }
