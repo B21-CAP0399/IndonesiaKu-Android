@@ -2,11 +2,7 @@
 B21-CAP0399's Capstone Project - Android Side
 
 ## Features
-
-- Light/dark mode toggle
-- Live previews
-- Fullscreen mode
-- Cross platform
+- 
 
 ## Installation 
 
@@ -29,7 +25,7 @@ Install my-project with npm
 
 ## Roadmap
 
-- Additional browser support
+- 
 
 
 
