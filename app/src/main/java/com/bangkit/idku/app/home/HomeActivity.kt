@@ -9,7 +9,9 @@ import androidx.navigation.ui.setupWithNavController
 import com.bangkit.idku.app.R
 import com.bangkit.idku.app.databinding.ActivityHomeBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class HomeActivity : AppCompatActivity() {
     private val binding by lazy {
         ActivityHomeBinding.inflate(layoutInflater)

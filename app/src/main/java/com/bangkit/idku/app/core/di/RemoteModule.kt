@@ -2,6 +2,7 @@ package com.bangkit.idku.app.core.di
 
 import com.bangkit.idku.app.BuildConfig
 import com.bangkit.idku.app.core.data.source.remote.network.IndonesiaKuServices
+import com.google.firebase.auth.FirebaseAuth
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -35,4 +36,6 @@ object RemoteModule {
             .build()
             .create(IndonesiaKuServices::class.java)
 
+    @Provides
+    fun provideFirebaseAuth(): FirebaseAuth = FirebaseAuth.getInstance()
 }

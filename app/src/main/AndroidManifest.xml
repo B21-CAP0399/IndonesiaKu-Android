@@ -4,8 +4,6 @@
     package="com.bangkit.idku.app">
 
     <uses-sdk tools:overrideLibrary="com.google.zxing.client.android" />
-
-    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CAMERA" />
 
     <application
@@ -18,7 +16,7 @@
         android:theme="@style/Theme.IndonesiaKu">
         <activity
             android:name=".onboard.ui.OnboardActivity"
-            android:theme="@style/Theme.MaterialComponents.NoActionBar"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"
             android:label="@string/title_activity_onboarding">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

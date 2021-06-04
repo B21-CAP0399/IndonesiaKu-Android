@@ -10,7 +10,6 @@ class OnboardActivity : AppCompatActivity() {
     private val binding by lazy {
         ActivityOnboardBinding.inflate(layoutInflater)
     }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)

@@ -20,7 +20,6 @@ class UserRepositoryImpl @Inject constructor(
             .createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener { task -> sendVerification(task) }
 
-
     override fun login(email: String, password: String) =
         firebaseAuth.signInWithEmailAndPassword(email, password)
 

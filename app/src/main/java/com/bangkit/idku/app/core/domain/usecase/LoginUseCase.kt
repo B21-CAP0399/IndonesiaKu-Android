@@ -1,7 +1,11 @@
 package com.bangkit.idku.app.core.domain.usecase
 
-interface LoginUseCase {
-    fun login(email: String, password: String)
-    fun loginWithGoogle()
+import com.google.android.gms.tasks.Task
+import com.google.firebase.auth.AuthResult
+import com.google.firebase.auth.FirebaseUser
 
+interface LoginUseCase {
+    val user: FirebaseUser?
+    fun login(email: String, password: String): Task<AuthResult>
+    fun loginWithGoogle()
 }
