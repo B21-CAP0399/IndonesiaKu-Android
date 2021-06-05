@@ -88,6 +88,9 @@ class SignUpFragment : Fragment(), View.OnClickListener {
                         findNavController().navigate(action)
                     }
                 }
+        }else if(v?.id == R.id.btn_to_login){
+            val action = SignUpFragmentDirections.actionToLoginFragment()
+            findNavController().navigate(action)
         }
 
     }
