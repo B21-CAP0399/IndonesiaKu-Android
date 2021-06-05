@@ -4,6 +4,7 @@
     package="com.bangkit.idku.app">
 
     <uses-sdk tools:overrideLibrary="com.google.zxing.client.android" />
+
     <uses-permission android:name="android.permission.CAMERA" />
 
     <application
@@ -14,12 +15,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.IndonesiaKu">
+        <activity android:name=".onboard.ui.pin.forgetpin.ForgetPinActivity"></activity>
+        <activity android:name=".onboard.ui.pin.PinActivity" />
         <activity
             android:name=".onboard.ui.OnboardActivity"
-            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"
-            android:label="@string/title_activity_onboarding">
+            android:label="@string/title_activity_onboarding"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

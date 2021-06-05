@@ -22,4 +22,21 @@
         android:name="com.bangkit.idku.app.home.fragments.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
+    <activity
+        android:id="@+id/pinActivity"
+        android:name="com.bangkit.idku.app.onboard.ui.pin.PinActivity"
+        android:label="activity_pin"
+        tools:layout="@layout/activity_pin" >
+        <action
+            android:id="@+id/action_pinActivity_to_navigation_home"
+            app:destination="@id/navigation_home" />
+        <action
+            android:id="@+id/action_pinActivity_to_forgetPinActivity"
+            app:destination="@id/forgetPinActivity" />
+    </activity>
+    <activity
+        android:id="@+id/forgetPinActivity"
+        android:name="com.bangkit.idku.app.onboard.ui.pin.forgetpin.ForgetPinActivity"
+        android:label="activity_forget_pin"
+        tools:layout="@layout/activity_forget_pin" />
 </navigation>
