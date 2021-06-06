@@ -20,4 +20,15 @@
     <string name="error_edit_email">Email is not Valid</string>
     <string name="error_edit_password">Password is not valid</string>
     <string name="action_to_login">Already have an account? Click here</string>
+    <string name="title_verifikasi">Verifikasi PIN</string>
+    <string name="txt_input_pin">Masukan Pin Anda</string>
+    <string name="text_btn_masuk">Masuk</string>
+    <string name="forget_pin">Lupa PIN ?</string>
+    <string name="txt_empty" />
+    <string name="hint_pin">******</string>
+    <string name="masukan_kode_verifikasi">Masukan Kode Verifikasi</string>
+    <string name="note_verif">Masukkan kode yang telah dikirim melalui email anda di z****m@gmail.com</string>
+    <string name="txt_kirim">Kirim</string>
+    <string name="txt_nik">Masukan Nomer Identitas KTP Anda</string>
+    <string name="txt_ps_nik">Masukkan No. KTP sesuai dengan KTP yang didaftarkan pada akun anda</string>
 </resources>

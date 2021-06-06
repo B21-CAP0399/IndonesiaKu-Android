@@ -33,6 +33,7 @@ class PinActivity : AppCompatActivity(), View.OnClickListener {
                     txtPin = binding?.edtPin?.text.toString()
                     val action = PinActivityDirections.actionPinActivityToNavigationHome()
                     v?.findNavController().navigate(action)
+                    binding = null
                 }else{
                     binding?.txtWrongPin?.text = "Your PIN is Wrong"
                     binding?.edtPin?.text?.clear()
@@ -48,10 +49,5 @@ class PinActivity : AppCompatActivity(), View.OnClickListener {
     private fun pinValidation(pin : String) : Boolean{
         val numberPin = Integer.parseInt(pin)
         return viewModel.getValidationPin(numberPin)
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        binding = null
     }
 }
