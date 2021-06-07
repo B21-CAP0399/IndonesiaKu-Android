@@ -31,4 +31,7 @@
     <string name="txt_kirim">Kirim</string>
     <string name="txt_nik">Masukan Nomer Identitas KTP Anda</string>
     <string name="txt_ps_nik">Masukkan No. KTP sesuai dengan KTP yang didaftarkan pada akun anda</string>
+    <string name="txt_new_pin">Masukan PIN Baru</string>
+    <string name="txt_confirm_new_pin">Konfirmasi PIN Baru</string>
+    <string name="txt_not_same_pin">PIN Tidak Sama</string>
 </resources>

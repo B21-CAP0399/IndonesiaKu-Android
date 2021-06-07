@@ -15,7 +15,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.IndonesiaKu">
-        <activity android:name=".onboard.ui.pin.entryotp.EntryOtpActivity"></activity>
+        <activity android:name=".onboard.ui.pin.newpin.NewPinActivity"></activity>
+        <activity android:name=".onboard.ui.pin.entryotp.EntryOtpActivity" />
         <activity android:name=".onboard.ui.pin.forgetpin.ForgetPinActivity" />
         <activity android:name=".onboard.ui.pin.PinActivity" />
         <activity

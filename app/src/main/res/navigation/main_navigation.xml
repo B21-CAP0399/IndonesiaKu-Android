@@ -38,5 +38,27 @@
         android:id="@+id/forgetPinActivity"
         android:name="com.bangkit.idku.app.onboard.ui.pin.forgetpin.ForgetPinActivity"
         android:label="activity_forget_pin"
-        tools:layout="@layout/activity_forget_pin" />
+        tools:layout="@layout/activity_forget_pin" >
+        <action
+            android:id="@+id/action_forgetPinActivity_to_entryOtpActivity"
+            app:destination="@id/entryOtpActivity" />
+    </activity>
+    <activity
+        android:id="@+id/entryOtpActivity"
+        android:name="com.bangkit.idku.app.onboard.ui.pin.entryotp.EntryOtpActivity"
+        android:label="activity_entry_otp"
+        tools:layout="@layout/activity_entry_otp" >
+        <action
+            android:id="@+id/action_entryOtpActivity_to_newPinActivity"
+            app:destination="@id/newPinActivity" />
+    </activity>
+    <activity
+        android:id="@+id/newPinActivity"
+        android:name="com.bangkit.idku.app.onboard.ui.pin.newpin.NewPinActivity"
+        android:label="activity_new_pin"
+        tools:layout="@layout/activity_new_pin" >
+        <action
+            android:id="@+id/action_newPinActivity_to_pinActivity"
+            app:destination="@id/pinActivity" />
+    </activity>
 </navigation>
