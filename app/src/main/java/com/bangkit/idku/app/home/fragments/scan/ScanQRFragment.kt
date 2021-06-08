@@ -27,12 +27,6 @@ class ScanQRFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentScanQrBinding.inflate(inflater, container, false)
-//        val root: View = binding.root
-//
-//        val textView: TextView = binding.textDashboard
-//        dashboardViewModel.text.observe(viewLifecycleOwner, Observer {
-//            textView.text = it
-//        })
         return binding?.root
     }
 
@@ -57,7 +51,6 @@ class ScanQRFragment : Fragment() {
                 isAutoFocusEnabled = true
                 decodeCallback = DecodeCallback {
                     activity.runOnUiThread {
-                        Toast.makeText(activity, it.text, Toast.LENGTH_LONG).show()
                     }
                 }
                 errorCallback = ErrorCallback {
@@ -115,7 +108,6 @@ class ScanQRFragment : Fragment() {
                 }
             }
         }
-//        EasyPermissions.onRequestPermissionsResult(requestCode, permissions, grantResults)
     }
 
     companion object {

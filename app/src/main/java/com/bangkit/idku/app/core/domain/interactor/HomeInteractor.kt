@@ -9,7 +9,9 @@ import javax.inject.Inject
 class HomeInteractor @Inject constructor(
     private val userRepository: UserRepository,
     private val identityRepository: IdentityRepository
-): HomeUseCase{
+) : HomeUseCase {
     override val user: FirebaseUser?
         get() = userRepository.user
+
+    override fun signOut() = userRepository.logout()
 }

@@ -1,5 +1,6 @@
 package com.bangkit.idku.app.onboard.ui.login
 
+import android.R.attr
 import android.content.Intent
 import android.content.Intent.FLAG_ACTIVITY_CLEAR_TASK
 import android.content.Intent.FLAG_ACTIVITY_NEW_TASK
@@ -9,7 +10,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.widget.doOnTextChanged
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
@@ -17,6 +18,8 @@ import com.bangkit.idku.app.R
 import com.bangkit.idku.app.databinding.FragmentLoginBinding
 import com.bangkit.idku.app.home.HomeActivity
 import com.bangkit.idku.app.utils.*
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.collect
@@ -24,19 +27,18 @@ import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.launch
 import timber.log.Timber
 
+
 @AndroidEntryPoint
 class LoginFragment : Fragment(), View.OnClickListener {
     private var binding: FragmentLoginBinding? = null
-    private val viewModel: LoginViewModel by viewModels()
+    private val viewModel: LoginViewModel by activityViewModels()
 
     private val emailState = MutableStateFlow("")
     private val passwordState = MutableStateFlow("")
-
     private val formIsValid = combine(
         emailState,
         passwordState
     ) { email, password -> isEmailValid(email) and isPasswordValid(password) }
-
     private val args: LoginFragmentArgs by navArgs()
 
     override fun onCreateView(
@@ -49,18 +51,8 @@ class LoginFragment : Fragment(), View.OnClickListener {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        if(viewModel.user != null){
-            Intent(activity, HomeActivity::class.java).also {
-                it.flags = FLAG_ACTIVITY_NEW_TASK or FLAG_ACTIVITY_CLEAR_TASK
-                startActivity(it)
-            }
-        }
-
-        val signedUp = args.signedUp
-
         binding?.apply {
-            if(signedUp) {
+            if (args.signedUp) {
                 root.showSnackbar("Check your email for account verification!")
             }
 

@@ -1,16 +1,16 @@
-package com.bangkit.idku.app.home.fragments.notifications
+package com.bangkit.idku.app.home.fragments.profile
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.bangkit.idku.app.databinding.FragmentNotificationsBinding
+import com.bangkit.idku.app.databinding.FragmentProfileBinding
 
-class NotificationsFragment : Fragment() {
+class ProfileFragment : Fragment() {
 
     //    private lateinit var notificationsViewModel: NotificationsViewModel
-    private var binding: FragmentNotificationsBinding? = null
+    private var binding: FragmentProfileBinding? = null
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -18,7 +18,7 @@ class NotificationsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        binding = FragmentNotificationsBinding.inflate(inflater, container, false)
+        binding = FragmentProfileBinding.inflate(inflater, container, false)
         return binding?.root
     }
 
