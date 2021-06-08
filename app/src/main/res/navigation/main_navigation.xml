@@ -18,10 +18,9 @@
         tools:layout="@layout/fragment_scan_qr" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.bangkit.idku.app.home.fragments.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:name="com.bangkit.idku.app.home.fragments.profile.ProfileFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_profile" />
     <activity
         android:id="@+id/pinActivity"
         android:name="com.bangkit.idku.app.onboard.ui.pin.PinActivity"
@@ -61,4 +60,7 @@
             android:id="@+id/action_newPinActivity_to_pinActivity"
             app:destination="@id/pinActivity" />
     </activity>
+=======
+        tools:layout="@layout/fragment_profile" />
+>>>>>>> Stashed changes
 </navigation>
