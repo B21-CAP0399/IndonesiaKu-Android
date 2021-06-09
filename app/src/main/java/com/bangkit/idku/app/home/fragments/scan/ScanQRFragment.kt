@@ -6,21 +6,23 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import android.widget.Toast.LENGTH_SHORT
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.lifecycleScope
 import com.bangkit.idku.app.databinding.FragmentScanQrBinding
 import com.budiyev.android.codescanner.*
 import com.budiyev.android.codescanner.CodeScanner.ALL_FORMATS
+import kotlinx.coroutines.launch
 
 class ScanQRFragment : Fragment() {
-
-    //    private val dashboardViewModel: DashboardViewModel
+    private val viewModel: ScanQRViewModel by viewModels()
     private var binding: FragmentScanQrBinding? = null
     private lateinit var codeScanner: CodeScanner
 
-    // This property is only valid between onCreateView and
-    // onDestroyView.
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -39,9 +41,7 @@ class ScanQRFragment : Fragment() {
 
     private fun qrCodeScanner() {
         binding?.apply {
-            val scannerView = scannerView
-            val activity = requireActivity()
-            codeScanner = CodeScanner(activity, scannerView)
+            codeScanner = CodeScanner(requireActivity(), scannerView)
 
             codeScanner.apply {
                 camera = CodeScanner.CAMERA_BACK
@@ -50,11 +50,13 @@ class ScanQRFragment : Fragment() {
                 scanMode = ScanMode.CONTINUOUS
                 isAutoFocusEnabled = true
                 decodeCallback = DecodeCallback {
-                    activity.runOnUiThread {
+                    lifecycleScope.launch {
+                        Toast.makeText(context, it.text, LENGTH_SHORT).show()
+                        viewModel.getAccessPermission(it.text)
                     }
                 }
                 errorCallback = ErrorCallback {
-                    activity.runOnUiThread {
+                    activity?.runOnUiThread {
                         Toast.makeText(activity, it.message, Toast.LENGTH_LONG).show()
                     }
                 }

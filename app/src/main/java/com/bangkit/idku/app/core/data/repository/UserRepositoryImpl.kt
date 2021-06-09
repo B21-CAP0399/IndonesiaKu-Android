@@ -8,7 +8,6 @@ import com.google.firebase.auth.FirebaseUser
 import javax.inject.Inject
 import javax.inject.Singleton
 
-@Singleton
 class UserRepositoryImpl @Inject constructor(
     private val firebaseAuth: FirebaseAuth
 ) : UserRepository {
@@ -31,7 +30,6 @@ class UserRepositoryImpl @Inject constructor(
                     }
                 }
         }
-
 
     override fun logout() = firebaseAuth.signOut()
 }

@@ -12,9 +12,13 @@ data class IdentityCard(
     // tanggal lahir
     val birthDate: Date,
     // Alamat beserta informasi pelengkap
-    val address: Address,
+    val address: String,
+    val RT: String,
+    val RW: String,
+    val subDistrict: String,
+    val district: String,
     // Agama
-    val religion: Religion,
+    val religion: String,
     // True if married & false if not married?
     val marriageStatus: Boolean,
     // Pekerjaan
@@ -24,21 +28,3 @@ data class IdentityCard(
     // Berlaku Hingga
     val validUntil: Date,
 )
-
-data class Address(
-    val address: String,
-    val RT: String,
-    val RW: String,
-    val subDistrict: String,
-    val district: String
-)
-
-enum class Religion {
-    ISLAM,
-    BUDDHA,
-    KONGHUCU,
-    KRISTEN,
-    KATOLIK,
-    HINDU,
-    KEPERCAYAAN_TERHADAP_TUHAN_YME
-}

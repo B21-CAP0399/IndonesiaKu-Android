@@ -35,4 +35,18 @@
     <string name="txt_new_pin">Masukan PIN Baru</string>
     <string name="txt_confirm_new_pin">Konfirmasi PIN Baru</string>
     <string name="txt_not_same_pin">PIN Tidak Sama</string>
+    <string name="edit_account_information">Edit Account Information</string>
+    <string name="header_account">Account</string>
+    <string name="action_about">About</string>
+    <string name="action_sign_out">Sign Out</string>
+    <string name="tv_display_name">Display Name</string>
+    <string name="tv_user">User</string>
+    <string name="sign_up_to_indonesiaku">Sign Up to IndonesiaKu</string>
+    <string name="hint_confirm_password">Confirm Password</string>
+    <string name="action_sign_up">Sign Up</string>
+    <string name="action_change_password">Change Password</string>
+    <string name="prompt_display_name">Display Name</string>
+    <string name="action_save_changes">Save Changes</string>
+    <string name="title_edit_profile">"Edit your profile here"</string>
+    <string name="title_change_password">Change your password</string>
 </resources>

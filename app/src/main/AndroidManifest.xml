@@ -15,7 +15,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.IndonesiaKu">
-        <activity android:name=".onboard.ui.pin.newpin.NewPinActivity"></activity>
+        <activity
+            android:name=".home.profile.ChangePasswordActivity"
+            android:label="@string/title_change_password"/>
+        <activity
+            android:name=".home.profile.EditProfileActivity"
+            android:label="@string/title_edit_profile"/>
+        <activity android:name=".home.scan_result.ScanResultActivity" />
+        <activity android:name=".onboard.ui.pin.newpin.NewPinActivity" />
         <activity android:name=".onboard.ui.pin.entryotp.EntryOtpActivity" />
         <activity android:name=".onboard.ui.pin.forgetpin.ForgetPinActivity" />
         <activity android:name=".onboard.ui.pin.PinActivity" />
@@ -25,7 +32,6 @@
             android:theme="@style/Theme.MaterialComponents.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

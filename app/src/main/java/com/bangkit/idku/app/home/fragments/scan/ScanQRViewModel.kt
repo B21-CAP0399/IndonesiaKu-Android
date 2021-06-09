@@ -1,13 +1,14 @@
 package com.bangkit.idku.app.home.fragments.scan
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.bangkit.idku.app.core.domain.usecase.AuthenticationUseCase
+import com.google.android.gms.tasks.Task
+import com.google.firebase.firestore.DocumentSnapshot
+import dagger.hilt.android.lifecycle.HiltViewModel
 
-class ScanQRViewModel : ViewModel() {
-
-    private val _text = MutableLiveData<String>().apply {
-        value = "This is dashboard Fragment"
-    }
-    val text: LiveData<String> = _text
+@HiltViewModel
+class ScanQRViewModel(
+    private val authenticationUseCase: AuthenticationUseCase
+) : ViewModel() {
+    fun getAccessRequest(id: String) = authenticationUseCase.getAccessRequest(id)
 }
