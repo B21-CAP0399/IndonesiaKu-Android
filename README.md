@@ -9,8 +9,14 @@ B21-CAP0399's Capstone Project - Android Side
 ![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
 
 
-## Tech Stack
-
+## Specs
+- Minimum SDK 16
+- 100% Kotlin based
+- MVVM Architecture
+- Architecture Components (Lifecycle, LiveData, ViewModel, Room Persistence)
+- ViewBinding 
+- Material Design
+- Hilt-Dagger
 
 
 ## Roadmap
