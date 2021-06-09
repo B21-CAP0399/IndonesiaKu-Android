@@ -16,6 +16,7 @@ import com.bangkit.idku.app.databinding.FragmentScanQrBinding
 import com.budiyev.android.codescanner.*
 import com.budiyev.android.codescanner.CodeScanner.ALL_FORMATS
 import kotlinx.coroutines.launch
+import timber.log.Timber
 
 class ScanQRFragment : Fragment() {
     private val viewModel: ScanQRViewModel by viewModels()
@@ -52,7 +53,12 @@ class ScanQRFragment : Fragment() {
                 decodeCallback = DecodeCallback {
                     lifecycleScope.launch {
                         Toast.makeText(context, it.text, LENGTH_SHORT).show()
-                        viewModel.getAccessPermission(it.text)
+                        viewModel.getAccessRequest(it.text)
+                            .addOnCompleteListener { task ->
+                                if(task.isSuccessful){
+                                    Timber.d(task.result.toString())
+                                }
+                            }
                     }
                 }
                 errorCallback = ErrorCallback {

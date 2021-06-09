@@ -49,4 +49,7 @@
     <string name="action_save_changes">Save Changes</string>
     <string name="title_edit_profile">"Edit your profile here"</string>
     <string name="title_change_password">Change your password</string>
+    <string name="text_welcome">Welcome, %s!</string>
+    <string name="tv_identity">Your Identities</string>
+    <string name="action_authorize">Authorize</string>
 </resources>

@@ -29,21 +29,6 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding?.apply {
-            viewModel.user?.apply {
-                tvUsername.text = email
-                Timber.d(isEmailVerified.toString())
-                Timber.d(displayName)
-            }
-
-            btnSignOut.setOnClickListener {
-                viewModel.signOut()
-                Intent(activity, OnboardActivity::class.java).also {
-                    it.flags = Intent.FLAG_ACTIVITY_NEW_TASK or FLAG_ACTIVITY_CLEAR_TASK
-                    startActivity(it)
-                }
-            }
-        }
     }
 
     override fun onDestroyView() {
