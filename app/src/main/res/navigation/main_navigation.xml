@@ -18,6 +18,7 @@
         tools:layout="@layout/fragment_scan_qr" />
 
     <fragment
+        android:id="@+id/navigation_profile"
         android:name="com.bangkit.idku.app.home.fragments.profile.ProfileFragment"
         android:label="@string/title_profile"
         tools:layout="@layout/fragment_profile" />
@@ -60,7 +61,4 @@
             android:id="@+id/action_newPinActivity_to_pinActivity"
             app:destination="@id/pinActivity" />
     </activity>
-=======
-        tools:layout="@layout/fragment_profile" />
->>>>>>> Stashed changes
 </navigation>

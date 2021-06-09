@@ -5,7 +5,6 @@
     android:id="@+id/onboarding_navigation"
     app:startDestination="@id/loginFragment">
 
-    <include app:graph="@navigation/main_navigation" />
     <fragment
         android:id="@+id/signUpFragment"
         android:name="com.bangkit.idku.app.onboard.ui.signup.SignUpFragment"
@@ -27,9 +26,6 @@
         android:name="com.bangkit.idku.app.onboard.ui.login.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login">
-        <action
-            android:id="@+id/action_login"
-            app:destination="@id/mobile_navigation" />
         <action
             android:id="@+id/action_to_signUpFragment"
             app:destination="@id/signUpFragment" />

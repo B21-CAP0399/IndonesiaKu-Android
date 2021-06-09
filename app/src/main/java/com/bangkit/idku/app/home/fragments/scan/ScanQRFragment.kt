@@ -15,9 +15,11 @@ import androidx.lifecycle.lifecycleScope
 import com.bangkit.idku.app.databinding.FragmentScanQrBinding
 import com.budiyev.android.codescanner.*
 import com.budiyev.android.codescanner.CodeScanner.ALL_FORMATS
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 import timber.log.Timber
 
+@AndroidEntryPoint
 class ScanQRFragment : Fragment() {
     private val viewModel: ScanQRViewModel by viewModels()
     private var binding: FragmentScanQrBinding? = null

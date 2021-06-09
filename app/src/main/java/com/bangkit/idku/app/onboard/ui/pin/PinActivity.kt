@@ -34,8 +34,8 @@ class PinActivity : AppCompatActivity(), View.OnClickListener {
                 txtPin = binding?.edtPin?.text.toString()
                 if (pinValidation(txtPin)) {
                     txtPin = binding?.edtPin?.text.toString()
-                    val action = PinActivityDirections.actionPinActivityToNavigationHome()
-                    v?.findNavController().navigate(action)
+//                    val action = PinActivityDirections.actionPinActivityToNavigationHome()
+//                    v?.findNavController().navigate(action)
                     binding = null
                 } else {
                     binding?.txtWrongPin?.text = "Your PIN is Wrong"

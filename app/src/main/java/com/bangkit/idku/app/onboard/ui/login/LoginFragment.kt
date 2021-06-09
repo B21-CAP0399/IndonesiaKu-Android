@@ -51,39 +51,41 @@ class LoginFragment : Fragment(), View.OnClickListener {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding?.apply {
-            if (args.signedUp) {
-                root.showSnackbar("Check your email for account verification!")
-            }
+        if(activity != null){
+            binding?.apply {
+                if (args.signedUp) {
+                    root.showSnackbar("Check your email for account verification!")
+                }
 
-            edtEmail.editText?.apply {
-                doOnTextChanged { email, _, _, _ ->
-                    emailState.value = email.toString()
-                    val emailIsValid = isEmailValid(email.toString())
-                    when {
-                        emailIsValid.not() -> showError(getString(R.string.error_edit_email))
-                        emailIsValid -> hideError()
+                edtEmail.editText?.apply {
+                    doOnTextChanged { email, _, _, _ ->
+                        emailState.value = email.toString()
+                        val emailIsValid = isEmailValid(email.toString())
+                        when {
+                            emailIsValid.not() -> showError(getString(R.string.error_edit_email))
+                            emailIsValid -> hideError()
+                        }
                     }
                 }
-            }
 
-            edtPassword.editText?.apply {
-                doOnTextChanged { password, _, _, _ ->
-                    passwordState.value = password.toString()
-                    val passwordIsValid = isPasswordValid(password.toString())
-                    when {
-                        passwordIsValid.not() -> showError(getString(R.string.error_edit_password))
-                        passwordIsValid -> hideError()
+                edtPassword.editText?.apply {
+                    doOnTextChanged { password, _, _, _ ->
+                        passwordState.value = password.toString()
+                        val passwordIsValid = isPasswordValid(password.toString())
+                        when {
+                            passwordIsValid.not() -> showError(getString(R.string.error_edit_password))
+                            passwordIsValid -> hideError()
+                        }
                     }
                 }
-            }
 
-            viewLifecycleOwner.lifecycleScope.launch {
-                formIsValid.collect { formIsValidState -> btnLogin.isEnabled = formIsValidState }
-            }
+                viewLifecycleOwner.lifecycleScope.launch {
+                    formIsValid.collect { formIsValidState -> btnLogin.isEnabled = formIsValidState }
+                }
 
-            btnToSignUp.setOnClickListener(::onClick)
-            btnLogin.setOnClickListener(::onClick)
+                btnToSignUp.setOnClickListener(::onClick)
+                btnLogin.setOnClickListener(::onClick)
+            }
         }
     }
 
@@ -97,7 +99,6 @@ class LoginFragment : Fragment(), View.OnClickListener {
                             it.flags = FLAG_ACTIVITY_NEW_TASK or FLAG_ACTIVITY_CLEAR_TASK
                             startActivity(it)
                         }
-
                     } else {
                         Timber.e(task.exception)
                     }

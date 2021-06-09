@@ -11,7 +11,9 @@ import com.bangkit.idku.app.R
 import com.bangkit.idku.app.databinding.FragmentProfileBinding
 import com.bangkit.idku.app.home.profile.ChangePasswordActivity
 import com.bangkit.idku.app.home.profile.EditProfileActivity
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class ProfileFragment : Fragment(), View.OnClickListener {
 
     private var binding: FragmentProfileBinding? = null
